@@ -1,4 +1,4 @@
-OBJS = main.cpp
+OBJS = main.cpp Window.h Window.cpp Color.h Color.cpp Colors.h
 CC = g++
 COMPILER_FLAGS = -w
 LINKER_FLAGS = -lSDL2

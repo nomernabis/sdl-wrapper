@@ -3,12 +3,12 @@
 #include <SDL2/SDL.h>
 
 class Window{
-    SDL_Window* window;
-    bool running;
+    SDL_Window* _window;
+    bool _running;
     public:
     Window(const std::string& title, const int& width, const int& height);
     ~Window();
-    bool isRunning();
+    bool isRunning() const;
     void close();
     void clear();
     void present();

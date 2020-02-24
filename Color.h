@@ -9,4 +9,8 @@ class Color{
     public:
     Color();
     Color(const Uint8& red, const Uint8& green, const Uint8& blue, const Uint8& alpha = 0xFF);
+    const Uint8& red() const;
+    const Uint8& green() const;
+    const Uint8& blue() const;
+    const Uint8& alpha() const;
 };

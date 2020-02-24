@@ -11,11 +11,14 @@ Window::Window(const std::string& title, const int& width, const int& height){
             height,
             SDL_WINDOW_SHOWN
     );
+    _renderer = new Renderer(_window);
 }
 
 Window::~Window(){
+    delete _renderer;
     SDL_DestroyWindow(_window); 
     _window = NULL;
+    _renderer = NULL;
     SDL_Quit();
 }
 
@@ -27,10 +30,14 @@ void Window::close(){
     _running = false;
 }
 
-void Window::clear(){
-    
+void Window::clear(){ 
+    _renderer->clear();
 }
 
 void Window::present(){
+    _renderer->present();
+}
 
+void Window::setColor(const Color& color){
+    _renderer->setColor(color);
 }

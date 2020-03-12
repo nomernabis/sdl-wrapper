@@ -15,4 +15,5 @@ class Window{
     void clear();
     void present();
     void setColor(const Color& color);
+    void fillRect(SDL_Rect rect);
 };

@@ -41,3 +41,7 @@ void Window::present(){
 void Window::setColor(const Color& color){
     _renderer->setColor(color);
 }
+
+void Window::fillRect(SDL_Rect rect){
+    _renderer->fillRect(rect);
+}

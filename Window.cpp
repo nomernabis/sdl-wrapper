@@ -1,7 +1,7 @@
 
 #include "Window.h"
 
-Window::Window(const std::string& title, const int& width, const int& height){
+Window::Window(const std::string& title, const int& width, const int& height): _running(true){
     SDL_Init(SDL_INIT_VIDEO);
     _window = SDL_CreateWindow(
             title.c_str(),

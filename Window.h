@@ -16,4 +16,5 @@ class Window{
     void present();
     void setColor(const Color& color);
     void fillRect(SDL_Rect rect);
+    SDL_Texture* loadTexture(std::string path);
 };

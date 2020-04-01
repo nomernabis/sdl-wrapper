@@ -1,8 +1,9 @@
-
 #include "Window.h"
+#include <SDL2/SDL_image.h>
 
 Window::Window(const std::string& title, const int& width, const int& height): _running(true){
     SDL_Init(SDL_INIT_VIDEO);
+    IMG_Init(IMG_INIT_PNG);
     _window = SDL_CreateWindow(
             title.c_str(),
             SDL_WINDOWPOS_UNDEFINED,
@@ -44,4 +45,8 @@ void Window::setColor(const Color& color){
 
 void Window::fillRect(SDL_Rect rect){
     _renderer->fillRect(rect);
+}
+
+SDL_Texture* Window::loadTexture(std::string path){
+    return _renderer->loadTexture(path);
 }

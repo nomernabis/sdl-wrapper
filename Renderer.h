@@ -11,4 +11,5 @@ class Renderer{
     void setColor(const Color& color);
     void fillRect(const SDL_Rect& rect);
     Color& getColor() const;
+    SDL_Texture* loadTexture(std::string path);
 };

@@ -32,3 +32,10 @@ Color& Renderer::getColor() const {
 void Renderer::fillRect(const SDL_Rect& rect){
     SDL_RenderFillRect(_renderer, &rect);
 }
+
+SDL_Texture* Renderer::loadTexture(std::string path){
+    SDL_Surface* surface = IMG_Load(path.c_str());
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(_renderer, surface);
+    SDL_FreeSurface(surface);
+    return texture;
+}

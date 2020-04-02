@@ -50,3 +50,7 @@ void Window::fillRect(SDL_Rect rect){
 SDL_Texture* Window::loadTexture(std::string path){
     return _renderer->loadTexture(path);
 }
+
+void Window::drawTexture(SDL_Texture* texture){
+    _renderer->renderCopy(texture);
+}

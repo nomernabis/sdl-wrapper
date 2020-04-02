@@ -39,3 +39,7 @@ SDL_Texture* Renderer::loadTexture(std::string path){
     SDL_FreeSurface(surface);
     return texture;
 }
+
+void Renderer::renderCopy(SDL_Texture* texture){
+    SDL_RenderCopy(_renderer, texture, NULL, NULL);
+}

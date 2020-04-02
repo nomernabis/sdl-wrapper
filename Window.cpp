@@ -51,6 +51,6 @@ SDL_Texture* Window::loadTexture(std::string path){
     return _renderer->loadTexture(path);
 }
 
-void Window::drawTexture(SDL_Texture* texture){
-    _renderer->renderCopy(texture);
+void Window::drawTexture(SDL_Texture* texture, SDL_Rect* rect){
+    _renderer->renderCopy(texture, rect);
 }

@@ -17,5 +17,5 @@ class Window{
     void setColor(const Color& color);
     void fillRect(SDL_Rect rect);
     SDL_Texture* loadTexture(std::string path);
-    void drawTexture(SDL_Texture* texture);
+    void drawTexture(SDL_Texture* texture, SDL_Rect* rect);
 };

@@ -40,6 +40,6 @@ SDL_Texture* Renderer::loadTexture(std::string path){
     return texture;
 }
 
-void Renderer::renderCopy(SDL_Texture* texture){
-    SDL_RenderCopy(_renderer, texture, NULL, NULL);
+void Renderer::renderCopy(SDL_Texture* texture, SDL_Rect* rect){
+    SDL_RenderCopy(_renderer, texture, NULL, rect);
 }

@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include "Color.h"
 #include <string>
+#include <SDL2/SDL_image.h>
 
 class Renderer{
     SDL_Renderer* _renderer;

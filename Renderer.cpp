@@ -43,3 +43,7 @@ SDL_Texture* Renderer::loadTexture(std::string path){
 void Renderer::renderCopy(SDL_Texture* texture, SDL_Rect* rect){
     SDL_RenderCopy(_renderer, texture, NULL, rect);
 }
+
+void Renderer::drawRect(const SDL_Rect& rect){
+    SDL_RenderDrawRect(_renderer, &rect);
+}

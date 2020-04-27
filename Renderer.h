@@ -15,4 +15,5 @@ class Renderer{
     Color& getColor() const;
     SDL_Texture* loadTexture(std::string path);
     void renderCopy(SDL_Texture* texture, SDL_Rect* rect);
+    void drawRect(const SDL_Rect& rect);
 };

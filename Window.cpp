@@ -56,5 +56,5 @@ void Window::drawTexture(SDL_Texture* texture, SDL_Rect* rect){
 }
 
 void Window::drawRect(const SDL_Rect& rect){
-    _rendered->drawRect(rect);
+    _renderer->drawRect(rect);
 }

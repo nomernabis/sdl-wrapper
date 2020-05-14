@@ -58,6 +58,6 @@ void Window::drawTexture(SDL_Texture* texture, SDL_Rect* rect){
 void Window::drawRect(const SDL_Rect& rect){
     _renderer->drawRect(rect);
 }
-void drawRotated(SDL_Texture* texture, SDL_Rect* rect, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip){
+void Window::drawRotated(SDL_Texture* texture, SDL_Rect* rect, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip){
     _renderer->drawRotated(texture, rect, clip, angle, center, flip);
 }

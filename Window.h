@@ -19,4 +19,5 @@ class Window{
     SDL_Texture* loadTexture(std::string path);
     void drawTexture(SDL_Texture* texture, SDL_Rect* rect);
     void drawRect(const SDL_Rect& rect);
+    void drawRotated(SDL_Texture* texture, SDL_Rect* rect, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip);
 };

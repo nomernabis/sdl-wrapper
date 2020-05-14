@@ -47,3 +47,7 @@ void Renderer::renderCopy(SDL_Texture* texture, SDL_Rect* rect){
 void Renderer::drawRect(const SDL_Rect& rect){
     SDL_RenderDrawRect(_renderer, &rect);
 }
+
+void drawRotated(SDL_Texture* texture, SDL_Rect* rect, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip){
+    SDL_RenderCopyEx(_renderer, texture, clip, rect, angle, center, flip);
+}
